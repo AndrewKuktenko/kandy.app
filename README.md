@@ -1,3 +1,17 @@
+<h2 align="center">
+  <p>Personal website built with Astro</p>
+  <a href="https://www.kuktenko.dev/" target="_blank">www.kuktenko.dev</a>
+</h2>
+
+<div align="center">
+  <img alt="Demo" src="./demo/theme.webp" />
+  <img alt="Demo" src="./demo/insights.webp" />
+</div>
+
+<p align="center">
+Code is licensed under MIT, words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
+</p>
+
 # Astro Starter Kit: Basics
 
 ```sh

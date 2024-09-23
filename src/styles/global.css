@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    font-family: system-ui, sans-serif;
+    font-size: 1.125rem;
+  }
+
+  .hover-grad-text {
+    @apply text-[100px] text-center text-transparent bg-clip-text transition-all ease-in-out duration-700;
+    background-image: linear-gradient(
+      to right,
+      theme("colors.slate.950"),
+      theme("colors.slate.950") 33%,
+      theme("colors.red.500") 66%,
+      theme("colors.yellow.500"),
+      theme("colors.green.500"),
+      theme("colors.blue.500"),
+      theme("colors.purple.500")
+    );
+    background-size: 300% 100%;
+    background-position: top left 100%;
+  }
+
+  @media screen and (min-width: 640px) {
+    .hover-grad-text {
+      background-position: top left;
+    }
+    .hover-grad-text:hover {
+      background-position: top left 100%;
+    }
+  }
+
+  .animate-marker {
+    animation: marker 4s ease-out infinite;
+  }
+
+  @keyframes marker {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    35% {
+      transform: translate(-50%, -50%) scale(6);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(6);
+      opacity: 0;
+    }
+  }
+}

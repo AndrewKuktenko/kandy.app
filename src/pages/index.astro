@@ -1,123 +1,210 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { SOCIALS } from "../data/socials";
+import Layout from "../layouts/Layout.astro";
+import Drawer from "../components/Drawer.astro";
+import Component from "../components/Component.astro";
+
+import IconCursor from "../icons/cursor.astro";
+import IconAt from "../icons/at.astro";
+import IconArrow from "../icons/arrow.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Andriy Kuktenko">
+  <main
+    id="content"
+    class="flex h-full min-h-screen flex-col items-center justify-center gap-6 py-10 sm:py-10 md:py-4 lg:gap-12 drawer drawer-end"
+  >
+    <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+      <section
+        id="about"
+        aria-label="About me"
+        class="group col-span-2 flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white bg-sky-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50"
+      >
+        <div
+          class="flex lg:items-start gap-4 flex-row items-center text-center"
+        >
+          <img
+            class="aspect-square size-10 rounded-full grayscale-0 scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+            src="/images/avatar.webp"
+            alt="avatar"
+          />
+          <div class="flex flex-col items-start">
+            <p
+              class="font-roboto-condensed font-semibold text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+            >
+              Andriy Kuktenko
+            </p>
+            <p
+              class="font-roboto-condensed font-medium text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+            >
+              Full Stack Engineer
+            </p>
+          </div>
+        </div>
+        <p
+          class="font-roboto-condensed font-thin text-sm max-w-72 text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+        >
+          I primarily focus on TypeScript-based full-stack projects (Node.js,
+          React, React Native) and cloud platforms (AWS, DigitalOcean, Vercel,
+          Firebase, etc.), serving as a Full Stack Engineer.
+        </p>
+      </section>
+      <div
+        class="group overflow-hidden relative flex gap-1 h-40 w-36 flex-col rounded-3xl border-4 border-white sm:bg-stone-100 p-4 transition-all bg-rose-50 rotate-0 sm:rotate-1 sm:hover:rotate-0 sm:hover:bg-rose-50"
+      >
+        <img
+          class="aspect-square size-10 rounded-full grayscale-0 transition-all sm:grayscale sm:scale-100 sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+          src="/images/redvike.webp"
+          alt="redvike"
+        />
+        <p
+          class="font-roboto-condensed font-normal text-sm text-rose-700 sm:text-inherit sm:group-hover:text-rose-700"
+        >
+          Senior Full Stack Engineer
+        </p>
+        <p
+          class="flex gap-2 font-roboto-condensed font-thin text-sm text-rose-700 sm:text-inherit sm:group-hover:text-rose-700"
+        >
+          at <a
+            data-ccursor
+            href="https://redvike.com/case-studies/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Redvike (opens in a new tab)"
+            class="inline-flex z-10 rounded-md font-roboto-condensed font-medium text-sm group-hover:text-[#ff2123]"
+            >Redvike</a
+          >
+        </p>
+        <IconCursor />
+      </div>
+      <div
+        class="group overflow-hidden flex h-40 w-36 flex-col gap-1 rounded-3xl border-4 border-white sm:bg-stone-100 p-4 transition-all rotate-0 bg-yellow-50 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-yellow-50"
+      >
+        <img
+          class="aspect-square z-10 size-10 rounded-full transition-all grayscale-0 scale-110 sm:scale-100 sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+          src="/images/gmail.webp"
+          alt="redvike"
+        />
+        <p
+          class="font-roboto-condensed z-10 font-normal text-sm text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600"
+        >
+          Let's keep in touch!
+        </p>
+        <IconAt />
+        <a
+          data-ccursor
+          class="inline-flex items-center gap-2 font-roboto-condensed px-3 py-2 text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium"
+          href="mailto:andriy.kuktenko@gmail.com"
+        >
+          Mail me
+          <span
+            class="w-2 h-2 rounded-full bg-green-400 duration-1000 animate-pulse"
+          ></span>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-4">
+      <h1
+        class="hover-grad-text font-roboto-condensed uppercase font-semibold text-5xl lg:text-[7rem] lg:leading-[8rem]"
+      >
+        A. Kuktenko
+      </h1>
+      <div
+        class="flex w-full items-center justify-center overflow-hidden gap-2"
+      >
+        <p
+          class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem]"
+        >
+          deliver
+          <div class="group relative inline-block">
+            <div
+              class="transition-transform duration-100 group-hover:-translate-y-16"
+            >
+              <p
+                class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem]"
+              >
+                full stack solutions.
+              </p>
+            </div>
+            <div
+              class="absolute inset-x-0 top-0 w-max translate-y-16 transition-transform duration-100 group-hover:translate-y-0"
+            >
+              <p
+                class="font-roboto-condensed font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+              >
+                fast.
+              </p>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+    <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+      <div
+        aria-label="Social media"
+        class="flex group flex-wrap h-40 w-36 flex-col rounded-3xl border-4 border-white p-4 transition-all rotate-0 bg-cyan-50 sm:bg-stone-100 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-cyan-50"
+      >
+        {
+          SOCIALS.map((social) => (
+            <a
+              data-ccursor
+              class="flex flex-col basis-1/2 items-center justify-center rounded-md"
+              href={social.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`${social.name} (opens in a new tab)`}
+            >
+              <Component component={social.icon} />
+            </a>
+          ))
+        }
+      </div>
+      <div class="drawer-content">
+        <label
+          for="experience-drawer"
+          class="group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100"
+        >
+          <span
+            class="inline-flex sm:cursor-none gap-3 items-center text-3xl font-bold font-serif italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
+          >
+            Show
+            <IconArrow />
+          </span>
+          <span
+            class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
+            >My</span
+          >
+          <span
+            class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
+            >Work</span
+          >
+        </label>
+      </div>
+      <a
+        href="https://maps.app.goo.gl/nBVupWZoVn7PLiXk9"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Florida, USA"
+        class="relative sm:cursor-none group overflow-hidden col-span-2 h-40 w-full rounded-3xl border-4 border-white p-4 transition-all rotate-0 sm:rotate-2 sm:hover:rotate-0"
+      >
+        <div
+          class="absolute inset-0 z-10 bg-[url('/images/florida.webp')] bg-center bg-cover bg-no-repeat filter grayscale-0 sm:grayscale sm:group-hover:grayscale-0"
+        >
+        </div>
+        <div
+          class="absolute z-30 left-1/2 top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 animate-marker rounded-full bg-blue-500"
+        >
+        </div>
+        <div
+          class="absolute left-1/2 top-1/2 z-30 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500 shadow-2xl"
+        >
+        </div>
+        <span
+          class="absolute left-4/2 top-1 z-30 font-semibold font-roboto-condensed text-lg text-white"
+          >FLORIDA, USA</span
+        >
+      </a>
+    </div>
+    <Drawer />
+  </main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>

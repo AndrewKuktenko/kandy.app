@@ -1,0 +1,52 @@
+---
+import Experience from "../components/Experience.astro";
+import { EXPERIENCE } from "../data/experience";
+import ArrowLeft from "../icons/arrow-left.astro";
+---
+
+<input id="experience-drawer" type="checkbox" class="drawer-toggle" />
+<div
+  class="drawer-side scrollbar scrollbar-thumb-pink-700 scrollbar-track-pink-300"
+>
+  <label
+    for="experience-drawer"
+    aria-label="close sidebar"
+    class="drawer-overlay"></label>
+  <div
+    class="bg-stone-100 min-h-full lg:w-2/4 md:w-full sm:w-full p-10 relative"
+  >
+    <div
+      class="inline-flex absolute top-0 left-0 justify-between px-6 py-4 w-full"
+    >
+      <label
+        for="experience-drawer"
+        aria-label="close sidebar"
+        data-ccursor
+        class="flex items-center justify-center rounded-md group"
+      >
+        <ArrowLeft />
+      </label>
+      <a
+        data-ccursor
+        class="leading-tight font-semibold group p-2 rounded px-3 text-pink-400 sm:text-zinc-600 sm:hover:text-pink-400"
+        aria-label="View Full Résumé"
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label="View Full Résumé"
+        href="https://andriy-kuktenko-resume.s3.amazonaws.com/resume.pdf"
+      >
+        <span class="font-roboto-condensed font-semibold">View Full Résumé</span
+        >
+      </a>
+    </div>
+    <section
+      id="experience"
+      class="mt-10 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="Work experience"
+    >
+      <ol class="group/list space-y-12">
+        {EXPERIENCE.map((experience) => <Experience {...experience} />)}
+      </ol>
+    </section>
+  </div>
+</div>
