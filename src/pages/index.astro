@@ -95,6 +95,8 @@ import IconArrow from "../icons/arrow.astro";
           data-ccursor
           class="inline-flex items-center gap-2 font-roboto-condensed px-3 py-2 text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium"
           href="mailto:andriy.kuktenko@gmail.com"
+          data-umami-event="Mail me click"
+          id="mail"
         >
           Mail me
           <span
@@ -153,6 +155,8 @@ import IconArrow from "../icons/arrow.astro";
               target="_blank"
               rel="noreferrer noopener"
               aria-label={`${social.name} (opens in a new tab)`}
+              data-umami-event={`${social.name} click`}
+              id={social.name}
             >
               <Component component={social.icon} />
             </a>
@@ -163,6 +167,8 @@ import IconArrow from "../icons/arrow.astro";
         <label
           for="experience-drawer"
           class="group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100"
+          data-umami-event="Show my work click"
+          id="experience"
         >
           <span
             class="inline-flex sm:cursor-none gap-3 items-center text-3xl font-bold font-serif italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
