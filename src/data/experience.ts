@@ -7,7 +7,7 @@ export const EXPERIENCE: ExperienceProps[] = [
     company: "Redvike (Remote)",
     companyUrl: "https://redvike.com",
     description:
-      "Contributed into development of custom CRM system for a leading real estate company in the USA. Designed fronted, utilizing technologies like React, MobX, Vite and Tailwind. Participated in the backend development using NestJS, Express, and MariaDB. Developed account management system, user roles, and permissions. Implemented integrations with third-party services, such as Stripe. Worked on the mobile application using ReactNative. Implemented CI/CD pipelines and Dockerized the application. Participated in code reviews, hiring processes and mentoring new developers",
+      "Contributed into development of custom CRM system for a leading real estate company in the USA. Designed fronted, utilizing technologies like React, MobX, Vite and Tailwind. Participated in the backend development using NestJS, Express, and MariaDB. Developed account management system, user roles, and permissions. Implemented integrations with third-party services, such as Stripe. Worked on the mobile application using ReactNative. Implemented CI/CD pipelines and Dockerized the application. Participated in code reviews, hiring processes and mentoring new developers.",
     technologies: [
       "JavaScript",
       "TypeScript",
@@ -33,7 +33,7 @@ export const EXPERIENCE: ExperienceProps[] = [
     company: "Getprospect",
     companyUrl: "https://www.getprospect.com",
     description:
-      "Joint this project as one of the first engineers and helped to build a successful lead generation platform from scratch. Implemented all core infrastructure, including the backend (NestJS, MongoDB, Redis, RabbitMQ), frontend (React, Redux), and integrations with various services (Salesforce, HubSpot, Zapier). Worked on the core features, such as email finder, email verifier, and CRM system. Designed and developed Google Chrome extension. Build multiple Dockerized microservices and implemented CI/CD pipelines. Design and developed company website and blog using Next.js.",
+      "Joined this project as one of the first engineers and helped to build a successful lead generation platform from scratch. Implemented all core infrastructure, including the backend (NestJS, MongoDB, Redis, RabbitMQ), frontend (React, Redux), and integrations with various services (Salesforce, HubSpot, Zapier). Worked on the core features, such as email finder, email verifier, and CRM system. Designed and developed Google Chrome extension. Build multiple Dockerized microservices and implemented CI/CD pipelines. Design and developed company website and blog using Next.js.",
     technologies: [
       "JavaScript",
       "TypeScript",
