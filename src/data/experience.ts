@@ -60,7 +60,7 @@ export const EXPERIENCE: ExperienceProps[] = [
     company: "Nowedo",
     companyUrl: "https://nowedo.marketing",
     description:
-      "Worked on marketing agency helping them to develop custom CRM system using PHP, Node.js, JavaScript, JQuery, and SASS/PostCSS. Created a lot of designs and websites for various clients. Implemented multi-language support, SEO optimization and performance improvements.",
+      "Worked on marketing agency helping them to develop custom CRM system using PHP (Laravel), JavaScript, JQuery, and SASS/PostCSS. Created a lot of designs and websites for various clients. Implemented multi-language support, SEO optimization and performance improvements.",
     technologies: [
       "PHP",
       "Node.js",
