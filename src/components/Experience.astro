@@ -15,7 +15,7 @@ const { dates, title, company, companyUrl, description, technologies, logo } =
     rel="noreferrer"
     aria-label={title}
     onclick={companyUrl ? undefined : "event.preventDefault();"}
-    class="group relative grid pb-1 transition-all hover:backdrop-blur-sm duration-500 sm:grid-cols-8 sm:gap-8 md:gap-4"
+    class="group relative grid pb-1 transition-all hover:backdrop-blur-xs duration-500 sm:grid-cols-8 sm:gap-8 md:gap-4"
   >
     <div
       class="absolute -inset-x-4 -inset-y-4 z-0 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 bg-pink-200 sm:bg-inherit sm:group-hover:bg-pink-200 sm:drop-shadow-none sm:group-hover:drop-shadow-md"
@@ -34,13 +34,13 @@ const { dates, title, company, companyUrl, description, technologies, logo } =
             class="inline-flex items-baseline font-medium leading-tight text-blue-600 sm:text-zinc-600 sm:group-hover:text-blue-600 group/link text-base"
           >
             <span
-              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded-sm md:-inset-x-6 md:-inset-y-4 lg:block"
             ></span>
             <div class="flex gap-x-2 items-center">
               {
                 logo && (
                   <img
-                    class="w-8 h-8 rounded grayscale-0 sm:grayscale sm:group-hover:grayscale-0"
+                    class="w-8 h-8 rounded-sm grayscale-0 sm:grayscale sm:group-hover:grayscale-0"
                     src={logo}
                     alt={`${company} logo`}
                   />
@@ -67,7 +67,7 @@ const { dates, title, company, companyUrl, description, technologies, logo } =
           <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
             {technologies.map((technology) => (
               <li class="mr-1.5 mt-2">
-                <div class="flex items-center font-roboto-condensed rounded-full text-blue-600 bg-white sm:border-zinc-700 shadow-sm px-3 py-1 text-xs font-medium leading-5 sm:border sm:border-opacity-50 sm:text-zinc-600 sm:group-hover:border-transparent sm:group-hover:text-blue-600 sm:group-hover:bg-white">
+                <div class="flex items-center font-roboto-condensed rounded-full text-blue-600 bg-white sm:border-zinc-700/50 shadow-xs px-3 py-1 text-xs font-medium leading-5 sm:border sm:text-zinc-600 sm:group-hover:border-transparent sm:group-hover:text-blue-600 sm:group-hover:bg-white">
                   {technology}
                 </div>
               </li>

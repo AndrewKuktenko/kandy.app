@@ -1,24 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+@plugin "tailwind-scrollbar";
 
-@layer components {
+@theme {
+  --font-roboto-condensed: "Roboto Condensed", sans-serif;
+}
+
+/* Tailwind v4 changed the default border color to currentColor; keep the v3 look. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
   html {
     font-family: system-ui, sans-serif;
     font-size: 1.125rem;
   }
+}
+
+@layer components {
 
   .hover-grad-text {
     @apply text-[100px] text-center text-transparent bg-clip-text transition-all ease-in-out duration-700;
     background-image: linear-gradient(
       to right,
-      theme("colors.slate.950"),
-      theme("colors.slate.950") 33%,
-      theme("colors.red.500") 66%,
-      theme("colors.yellow.500"),
-      theme("colors.green.500"),
-      theme("colors.blue.500"),
-      theme("colors.purple.500")
+      var(--color-slate-950),
+      var(--color-slate-950) 33%,
+      var(--color-red-500) 66%,
+      var(--color-yellow-500),
+      var(--color-green-500),
+      var(--color-blue-500),
+      var(--color-purple-500)
     );
     background-size: 300% 100%;
     background-position: top left 100%;
