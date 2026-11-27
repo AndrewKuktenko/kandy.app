@@ -8,6 +8,13 @@
   --font-roboto-condensed: "Roboto Condensed", sans-serif;
 }
 
+/* daisyUI 5 paints :root with --root-bg (base-100, white) while the drawer is
+   open, which shows as a white band when the page overscrolls. Match the page
+   background (html has bg-stone-100). */
+:root {
+  --root-bg: var(--color-stone-100);
+}
+
 /* Tailwind v4 changed the default border color to currentColor; keep the v3 look. */
 @layer base {
   *,
